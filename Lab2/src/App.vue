@@ -25,11 +25,3 @@ const { message } = storeToRefs(store)
     <RouterView />
   </div>
 </template>
-
-<style>
-
-h2 {
-  font-size: 20px;
-}
-
-</style>

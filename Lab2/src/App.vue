@@ -14,10 +14,10 @@ const { message } = storeToRefs(store)
         <h4>{{ message }}</h4>
       </div>
       <div class="wrapper">
-        <nav>
-          <RouterLink :to="{name: 'event-list-view'}">Event</RouterLink> |
-          <RouterLink :to="{name: 'student'}">Student</RouterLink> |
-          <RouterLink :to="{name: 'about'}">About</RouterLink> 
+        <nav class="py-6">
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{name: 'event-list-view'}">Event</RouterLink> |
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{name: 'student'}">Student</RouterLink> |
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{name: 'about'}">About</RouterLink> 
         </nav>
       </div>
     
@@ -27,18 +27,6 @@ const { message } = storeToRefs(store)
 </template>
 
 <style>
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 
 h2 {
   font-size: 20px;

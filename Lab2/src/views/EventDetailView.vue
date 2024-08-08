@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import type { Ref } from 'vue'
-import type { EventItem } from '@/type'
-const event = ref<EventItem | null> (null)
+import { onMounted, ref } from 'vue'
+import Event from '@/type/Event'
+const event = ref<Event> (null)
+
+onMounted(() => {
+
+})
 </script>
+
 <template>
     <div v-if="event">
         <h1>{{ event.title }}</h1>

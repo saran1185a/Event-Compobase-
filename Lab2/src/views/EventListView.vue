@@ -21,6 +21,7 @@
 
 onMounted(() => {
   watchEffect(() => {
+    events.value = null
     EventService.getEvents(2, page.value)
     .then((response) => {
       console.log(response.data);

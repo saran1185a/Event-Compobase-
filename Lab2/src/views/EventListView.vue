@@ -15,14 +15,13 @@
   const page = computed(() => props.page)
 
   const hasNextPage = computed(() => {
-  const totalPages = Math.ceil(totalEvents.value / 2)
+  const totalPages = Math.ceil(totalEvents.value / 3)
   return page.value < totalPages
 })
 
 onMounted(() => {
   watchEffect(() => {
-    events.value = null
-    EventService.getEvents(2, page.value)
+    EventService.getEvents(3, page.value)
     .then((response) => {
       console.log(response.data);
       events.value = response.data; 
